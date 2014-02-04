@@ -1,0 +1,11 @@
+parameters:
+    armenian.locale.translit.class: Azatyan\ArmenianLocaleBundle\Services\Translit
+    armenian.locale.encoding.class: Azatyan\ArmenianLocaleBundle\Services\Encoding
+
+services:
+    armenian.locale.translit:
+        class: %armenian.locale.translit.class%
+        arguments: []
+    armenian.locale.encoding:
+        class: %armenian.locale.encoding.class%
+        arguments: []
