@@ -1,11 +1,11 @@
 parameters:
-    armenian.locale.translit.class: ArmCoder\ArmenianLocaleBundle\Services\Translit
-    armenian.locale.encoding.class: ArmCoder\ArmenianLocaleBundle\Services\Encoding
+    armcoder.locale.translit.class: ArmCoder\ArmenianLocaleBundle\Services\Translit
+    armcoder.locale.encoding.class: ArmCoder\ArmenianLocaleBundle\Services\Encoding
 
 services:
-    armenian.locale.translit:
-        class: %armenian.locale.translit.class%
+    armcoder.locale.translit:
+        class: %armcoder.locale.translit.class%
         arguments: []
-    armenian.locale.encoding:
-        class: %armenian.locale.encoding.class%
+    armcoder.locale.encoding:
+        class: %armcoder.locale.encoding.class%
         arguments: []
