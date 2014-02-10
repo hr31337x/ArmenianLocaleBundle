@@ -1,14 +1,14 @@
 <?php
 /**
- * @author  Tigran Azatyan
+ * @author  ArmCoder
  */
 
-namespace Azatyan\ArmenianLocaleBundle\Services;
+namespace ArmCoder\ArmenianLocaleBundle\Services;
 
 /**
  * Armscii to Unicode Conversation
  * Class Unicode
- * @package Azatyan\ArmenianLocaleBundle\Services
+ * @package ArmCoder\ArmenianLocaleBundle\Services
  */
 class Encoding
 {

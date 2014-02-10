@@ -1,5 +1,5 @@
 {
-    "name": "tigran/armenian-locale-bundle",
+    "name": "armcoder/armenian-locale-bundle",
     "type": "symfony-bundle",
     "description": "Integrate Armenian to SF2",
     "keywords": ["armenian", "armenia","hayeren"],
@@ -7,7 +7,7 @@
     "authors": [
         {
             "name": "Tigran",
-            "email": "tigran@azatyan.info",
+            "email": "tigran@ArmCoder.info",
             "role" : "Developer"
         }
     ],
@@ -19,8 +19,8 @@
     },
     "autoload": {
         "psr-0": {
-            "Azatyan\\ArmenianLocaleBundle": ""
+            "ArmCoder\\ArmenianLocaleBundle": ""
         }
     },
-    "target-dir": "Azatyan/ArmenianLocaleBundle"
+    "target-dir": "ArmCoder/ArmenianLocaleBundle"
 }

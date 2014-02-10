@@ -1,13 +1,13 @@
 <?php
 /**
- *  @author Tigran Azatyan
+ *  @author ArmCoder
  */
 
-namespace Azatyan\ArmenianLocaleBundle\Services;
+namespace ArmCoder\ArmenianLocaleBundle\Services;
 
 /**
  * Class Translit
- * @package Azatyan\ArmenianLocaleBundle\Services
+ * @package ArmCoder\ArmenianLocaleBundle\Services
  *
  * To resolve armenian translit issues
  *

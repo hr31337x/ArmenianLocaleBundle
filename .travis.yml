@@ -10,4 +10,4 @@ before_script:
   - php composer.phar install
 
 notifications:
-  email: specialforspamers@azatyan.info
+  email: specialforspamers@armcoder.am

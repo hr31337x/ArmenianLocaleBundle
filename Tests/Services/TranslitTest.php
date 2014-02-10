@@ -1,16 +1,16 @@
 <?php
 
 /**
- *  @author Tigran Azatyan
+ *  @author ArmCoder
  */
 
-namespace Azatyan\ArmenianLocaleBundle\Tests\Services;
+namespace ArmCoder\ArmenianLocaleBundle\Tests\Services;
 
-use Azatyan\ArmenianLocaleBundle\Services\Translit;
+use ArmCoder\ArmenianLocaleBundle\Services\Translit;
 
 /**
  * Class TrasnlitTest
- * @package Azatyan\ArmenianLocaleBundle\Tests\Services
+ * @package ArmCoder\ArmenianLocaleBundle\Tests\Services
  */
 class TrasnlitTest extends \PHPUnit_Framework_TestCase
 {

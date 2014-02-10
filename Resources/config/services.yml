@@ -1,6 +1,6 @@
 parameters:
-    armenian.locale.translit.class: Azatyan\ArmenianLocaleBundle\Services\Translit
-    armenian.locale.encoding.class: Azatyan\ArmenianLocaleBundle\Services\Encoding
+    armenian.locale.translit.class: ArmCoder\ArmenianLocaleBundle\Services\Translit
+    armenian.locale.encoding.class: ArmCoder\ArmenianLocaleBundle\Services\Encoding
 
 services:
     armenian.locale.translit:
