@@ -8,6 +8,3 @@ php:
 before_script:
   - wget http://getcomposer.org/composer.phar
   - php composer.phar install
-
-notifications:
-  email: specialforspamers@armcoder.am
