@@ -39,7 +39,7 @@ class Encoding
         for ($i = 0; $i < $inStringLength; $i++) {
           $currentCharacter = mb_substr($inString, $i, 1, "UTF-8");
           $pos = mb_strpos( $this->armsciiLetters,$currentCharacter, 1, "UTF-8");
-          if ($pos < 0) {
+          if ($pos < -1) {
               $outString .= $currentCharacter;
           } else {
               $outString .= mb_substr($this->unicodeLetters, $pos,1, "UTF-8");
@@ -65,7 +65,7 @@ class Encoding
           $currentCharacter = mb_substr($inString,$i,1, "UTF-8");
 
           $pos = mb_strpos($this->unicodeLetters, $currentCharacter,1, "UTF-8");
-          if ($pos < 0) {
+          if ($pos < -1) {
               $outString .= $currentCharacter;
           } else {
               $outString .= mb_substr($this->armsciiLetters, $pos, 1, "UTF-8");
