@@ -20,7 +20,7 @@ $this->get("armcoder.locale.encoding")->Unicode2Armscii("Barev");  // returns so
 $this->get("armcoder.locale.encoding")->Armscii2Unicode("Barev");  // returns some with the Unicode encoding;
 ```
 
-<p>2. Whois Service</p>
+<p>3. Whois Service</p>
 ```php
 $this->get("armcoder.locale.whois")->get("amnic.am");  // returns text whois data
 ```
