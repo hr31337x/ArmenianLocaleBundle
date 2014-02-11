@@ -9,14 +9,14 @@ namespace ArmCoder\ArmenianLocaleBundle\Tests\Services;
 use ArmCoder\ArmenianLocaleBundle\Services\Whois;
 
 /**
- * Class EncodingTest
+ * Class WhoisTest
  * @package ArmCoder\ArmenianLocaleBundle\Tests\Services
  */
 class WhoisTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     *  Check Encoding function
+     *  Check Whois function
      */
     public function testGet()
     {
