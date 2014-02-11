@@ -10,3 +10,5 @@ This Bundle Integrates Armenian to Symfony2
 <a href="/Resources/doc/index.md">See documentation here</a>
 
 This Bundle Is Part Of <a href="http://www.symfony.am">Symfony.AM Project</a>
+
+Feedback email: tigran@symfony.am
