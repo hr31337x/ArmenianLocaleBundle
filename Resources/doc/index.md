@@ -19,3 +19,8 @@ $this->get("armcoder.locale.translit")->latinToArmenian("Barev");  // returns (s
 $this->get("armcoder.locale.encoding")->Unicode2Armscii("Barev");  // returns some with the Armscii encoding;
 $this->get("armcoder.locale.encoding")->Armscii2Unicode("Barev");  // returns some with the Unicode encoding;
 ```
+
+<p>2. Whois Service</p>
+```php
+$this->get("armcoder.locale.whois")->get("amnic.am");  // returns text whois data
+```
