@@ -1,4 +1,4 @@
-Install
+Installation
 =======
 ```bash
 php composer.phar require "armcoder/armenian-locale-bundle";
@@ -9,10 +9,10 @@ Activate The Bundle in Symfony's  AppKernel.php file
 new ArmCoder\ArmenianLocaleBundle\ArmCoderArmenianLocaleBundle(),
 ```
 Usage
-=============
+=======
 <p>1. Translit Service (thanks to <a target="_blank" href="http://hayeren.am/">www.hayeren.am</a>).</p>
 ```php
-$this->get("armcoder.locale.translit")->latinToArmenian("Barev");  // returns (string) "Բարև"
+$this->get("armcoder.locale.translit")->latinToArmenian("Barev");  // (string) "Բարև"
 ```
 <p>2. Encoding Service (thanks to <a target="_blank" href="http://hayeren.am/">www.hayeren.am</a> ).</p>
 ```php
