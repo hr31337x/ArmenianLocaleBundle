@@ -10,11 +10,11 @@ new ArmCoder\ArmenianLocaleBundle\ArmCoderArmenianLocaleBundle(),
 ```
 Usage
 =============
-<p>1. Translit Service (thanks to <a target="_blank" href="http://hayeren.am/">www.hayeren.am</a> project for JS Logic.</p>
+<p>1. Translit Service (thanks to <a target="_blank" href="http://hayeren.am/">www.hayeren.am</a> project for JS Logic).</p>
 ```php
 $this->get("armcoder.locale.translit")->latinToArmenian("Barev");  // returns (string) "Բարև"
 ```
-<p>2. Encoding Service (thanks to <a target="_blank" href="http://hayeren.am/">www.hayeren.am</a> project for JS Logic.</p>
+<p>2. Encoding Service (thanks to <a target="_blank" href="http://hayeren.am/">www.hayeren.am</a> project for JS Logic).</p>
 ```php
 $this->get("armcoder.locale.encoding")->Unicode2Armscii("Barev");  // returns some with the Armscii encoding;
 $this->get("armcoder.locale.encoding")->Armscii2Unicode("Barev");  // returns some with the Unicode encoding;
