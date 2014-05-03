@@ -30,7 +30,7 @@ class Encoding
      * @param $inString
      * @return string
      */
-    public function Armscii2Unicode($inString)
+    public function armsciiToUnicode($inString)
     {
 
         $inStringLength = mb_strlen($inString, "UTF-8");
@@ -54,7 +54,7 @@ class Encoding
      * @param $inString
      * @return string
      */
-    public function Unicode2Armscii($inString)
+    public function unicodeToArmscii($inString)
     {
 
         $inStringLength = mb_strlen($inString, "UTF-8");

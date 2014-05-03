@@ -16,8 +16,8 @@ $this->get("armcoder.locale.translit")->latinToArmenian("Barev");  // (string) "
 ```
 <p>2. Encoding Service (thanks to <a target="_blank" href="http://hayeren.am/">www.hayeren.am</a> ).</p>
 ```php
-$this->get("armcoder.locale.encoding")->Unicode2Armscii("Barev");  // (string) with Armscii encoding;
-$this->get("armcoder.locale.encoding")->Armscii2Unicode("Barev");  // (string) with Unicode encoding;
+$this->get("armcoder.locale.encoding")->unicodeToArmscii("Barev");  // (string) with Armscii encoding;
+$this->get("armcoder.locale.encoding")->armsciiToUnicode("Barev");  // (string) with Unicode encoding;
 ```
 <p>3. Whois Service</p>
 ```php

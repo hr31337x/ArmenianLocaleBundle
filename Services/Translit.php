@@ -35,7 +35,8 @@ class Translit
             $is2char = false;
             if ($i < ($inStringLength - 1)) {
 
-                for ($j = 0; $j < mb_strlen($outTwoCharLetters ,"UTF-8"); $j++) {
+                $twoCharLength = mb_strlen($outTwoCharLetters ,"UTF-8");
+                for ($j = 0; $j < $twoCharLength; $j++) {
                     if (mb_substr($inString, $i, 2, "UTF-8") == mb_substr($inTwoCharLetters, $j * 2, 2, "UTF-8")) {
                         $outString .= mb_substr($outTwoCharLetters, $j, 1, "UTF-8");
                         $i++;
