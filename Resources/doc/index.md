@@ -1,8 +1,8 @@
 Installation
 =======
 ```bash
-php composer.phar require "armcoder/armenian-locale-bundle";
-php composer.phar update;
+composer require "armcoder/armenian-locale-bundle";
+composer update;
 ```
 Activate The Bundle in Symfony's  AppKernel.php file
 ```php
