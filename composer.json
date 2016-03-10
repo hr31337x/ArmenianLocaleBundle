@@ -21,6 +21,5 @@
         "psr-4": {
             "Azatyan\\ArmenianLocaleBundle\\": ""
         }
-    },
-    "target-dir": "Azatyan/ArmenianLocaleBundle"
+    }
 }
