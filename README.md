@@ -3,7 +3,7 @@ Armenian Locale Bundle
 
 This Bundle Integrates Armenian to Symfony2
 
-<a href="https://travis-ci.org/Azatyan/ArmenianLocaleBundle">
+<a href="https://travis-ci.org/azatyan/ArmenianLocaleBundle">
   <img src="https://travis-ci.org/Azatyan/ArmenianLocaleBundle.png"
 </a>
 <br />
