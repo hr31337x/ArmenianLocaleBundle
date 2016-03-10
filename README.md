@@ -9,7 +9,7 @@ This Bundle Integrates Armenian to Symfony2
 
 
 
-<a href="/Resources/doc/index.md">See documentation here</a>
+<a href="/Resources/doc/index.md">See documentation</a>
 
 This Bundle Is Part Of <a href="https://www.symfony.am">Symfony.AM Project</a>
 
