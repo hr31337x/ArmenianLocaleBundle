@@ -1,64 +1,65 @@
 <?php
-/**
- *  @author ArmCoder
+
+/*
+ * This file is part of the ArmenianLocaleBundle.
+ * Symfony Framework Bundle
+ *
+ * @author Tigran Azatyan <tigran@azatyan.info>
+ *
+ * @copyright Tigran Azatyan  2013 - 2016
  */
 
-namespace ArmCoder\ArmenianLocaleBundle\Services;
+namespace Azatyan\ArmenianLocaleBundle\Services;
 
 /**
- * Class Translit
- * @package ArmCoder\ArmenianLocaleBundle\Services
- *
- * To resolve armenian translit issues
- *
+ * Class Translit.
  */
 class Translit
 {
     /**
-     * Converts latin symbols in text to armenian translit equivalents
+     * Converts latin symbols in text to armenian translit equivalents.
+     *
      * @param $inString
+     *
      * @return string
      */
     public function latinToArmenian($inString)
     {
-
-        $inOneCharLetters = "ABGDEZILXKHMYNOPJSVWTRCQFabgdez@ilx\$kh&mynopjsvwtrcqf?";
-        $outOneCharLetters = "ԱԲԳԴԵԶԻԼԽԿՀՄՅՆՈՊՋՍՎՎՏՐՑՔՖաբգդեզըիլխծկհճմյնոպջսվվտրցքֆ՞";
+        $inOneCharLetters = 'ABGDEZILXKHMYNOPJSVWTRCQFabgdez@ilx$kh&mynopjsvwtrcqf?';
+        $outOneCharLetters = 'ԱԲԳԴԵԶԻԼԽԿՀՄՅՆՈՊՋՍՎՎՏՐՑՔՖաբգդեզըիլխծկհճմյնոպջսվվտրցքֆ՞';
         $inTwoCharLetters = "YEYeE'EEEeY'@@THThZHZhJHJhKHKhC'TSTsD'DZDzGHGhTWTw&&SHShVOVoCHChR'RRRrP'PHPhO'OOOoyee'eey'thzhjhkhc'tsd'dzghtwshvochr'rrp'phevo'oo";
-        $outTwoCharLetters = "ԵԵԷԷԷԸԸԹԹԺԺԺԺԽԽԾԾԾՁՁՁՂՂՃՃՃՇՇՈՈՉՉՌՌՌՓՓՓՕՕՕեէէըթժժխծծձձղճշոչռռփփևօօ";
-        $inThreeCharLetters = "Uu";
-        $outThreeCharLetters = "Ուու";
-        $inStringLength = mb_strlen($inString, "UTF-8");
-        $outString = "";
+        $outTwoCharLetters = 'ԵԵԷԷԷԸԸԹԹԺԺԺԺԽԽԾԾԾՁՁՁՂՂՃՃՃՇՇՈՈՉՉՌՌՌՓՓՓՕՕՕեէէըթժժխծծձձղճշոչռռփփևօօ';
+        $inThreeCharLetters = 'Uu';
+        $outThreeCharLetters = 'Ուու';
+        $inStringLength = mb_strlen($inString, 'UTF-8');
+        $outString = '';
 
-        for ($i = 0; $i < $inStringLength; $i++) {
+        for ($i = 0; $i < $inStringLength; ++$i) {
             $is2char = false;
             if ($i < ($inStringLength - 1)) {
-
-                $twoCharLength = mb_strlen($outTwoCharLetters ,"UTF-8");
-                for ($j = 0; $j < $twoCharLength; $j++) {
-                    if (mb_substr($inString, $i, 2, "UTF-8") == mb_substr($inTwoCharLetters, $j * 2, 2, "UTF-8")) {
-                        $outString .= mb_substr($outTwoCharLetters, $j, 1, "UTF-8");
-                        $i++;
+                $twoCharLength = mb_strlen($outTwoCharLetters, 'UTF-8');
+                for ($j = 0; $j < $twoCharLength; ++$j) {
+                    if (mb_substr($inString, $i, 2, 'UTF-8') == mb_substr($inTwoCharLetters, $j * 2, 2, 'UTF-8')) {
+                        $outString .= mb_substr($outTwoCharLetters, $j, 1, 'UTF-8');
+                        ++$i;
                         $is2char = true;
-
                     }
                 }
             }
             if (!$is2char) {
-                $currentCharacter = mb_substr($inString, $i, 1, "UTF-8");
+                $currentCharacter = mb_substr($inString, $i, 1, 'UTF-8');
 
-                $pos = mb_strpos($inThreeCharLetters, $currentCharacter,0, "UTF-8");
+                $pos = mb_strpos($inThreeCharLetters, $currentCharacter, 0, 'UTF-8');
 
                 if ($pos == 0) {
-                    $pos = mb_strpos($inOneCharLetters, $currentCharacter, 0, "UTF-8");
+                    $pos = mb_strpos($inOneCharLetters, $currentCharacter, 0, 'UTF-8');
                     if ($pos == 0) {
                         $outString .= $currentCharacter;
                     } else {
-                        $outString .= mb_substr($outOneCharLetters, $pos, 1, "UTF-8");
+                        $outString .= mb_substr($outOneCharLetters, $pos, 1, 'UTF-8');
                     }
                 } else {
-                    $outString .= mb_substr($outThreeCharLetters, $pos * 2, 2, "UTF-8");
+                    $outString .= mb_substr($outThreeCharLetters, $pos * 2, 2, 'UTF-8');
                 }
             }
         }

@@ -1,15 +1,15 @@
 parameters:
-    armcoder.locale.translit.class: ArmCoder\ArmenianLocaleBundle\Services\Translit
-    armcoder.locale.encoding.class: ArmCoder\ArmenianLocaleBundle\Services\Encoding
-    armcoder.local.whois.server: "whois.amnic.net"
-    armcoder.local.whois.class: ArmCoder\ArmenianLocaleBundle\Services\Whois
+    azatyan.locale.translit.class: Azatyan\ArmenianLocaleBundle\Services\Translit
+    azatyan.locale.encoding.class: Azatyan\ArmenianLocaleBundle\Services\Encoding
+    azatyan.local.whois.server: "whois.amnic.net"
+    azatyan.local.whois.class: Azatyan\ArmenianLocaleBundle\Services\Whois
 services:
-    armcoder.locale.translit:
-        class: %armcoder.locale.translit.class%
+    azatyan.locale.translit:
+        class: %azatyan.locale.translit.class%
         arguments: []
-    armcoder.locale.encoding:
-        class: %armcoder.locale.encoding.class%
+    azatyan.locale.encoding:
+        class: %azatyan.locale.encoding.class%
         arguments: []
-    armcoder.local.whois:
-        class: %armcoder.local.whois.class%
-        arguments: [%armcoder.local.whois.server%]
+    azatyan.local.whois:
+        class: %azatyan.local.whois.class%
+        arguments: [%azatyan.local.whois.server%]

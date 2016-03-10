@@ -1,31 +1,34 @@
 <?php
 
-/**
- *  @author ArmCoder
+/*
+ * This file is part of the ArmenianLocaleBundle.
+ * Symfony Framework Bundle
+ *
+ * @author Tigran Azatyan <tigran@azatyan.info>
+ *
+ * @copyright Tigran Azatyan  2013 - 2016
  */
 
-namespace ArmCoder\ArmenianLocaleBundle\Tests\Services;
+namespace Azatyan\ArmenianLocaleBundle\Tests\Services;
 
-use ArmCoder\ArmenianLocaleBundle\Services\Translit;
+use Azatyan\ArmenianLocaleBundle\Services\Translit;
 
 /**
- * Class TrasnlitTest
- * @package ArmCoder\ArmenianLocaleBundle\Tests\Services
+ * Class TrasnlitTest.
  */
-class TrasnlitTest extends \PHPUnit_Framework_TestCase
+class TranslitTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
-     *  Check Translit function
+     *  Check Translit function.
      */
     public function testLatinToArmenian()
     {
-        $input = "Barev";
-        $expected = "Բարև";
+        $input = 'Barev';
+        $expected = 'Բարև';
 
         $translit = new Translit();
 
-        $actual =  $translit->latinToArmenian($input);
-        $this->assertEquals($expected, $actual,"Translit Test Failed");
+        $actual = $translit->latinToArmenian($input);
+        $this->assertSame($expected, $actual, 'Translit Test Failed');
     }
 }

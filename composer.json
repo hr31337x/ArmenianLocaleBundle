@@ -1,26 +1,26 @@
 {
-    "name": "armcoder/armenian-locale-bundle",
+    "name": "azatyan/armenian-locale-bundle",
     "type": "symfony-bundle",
-    "description": "Integrate Armenian to SF2",
+    "description": "Integrate Armenian to Symfony2 and Symfony3",
     "keywords": ["armenian", "armenia","hayeren"],
     "license": "MIT",
     "authors": [
         {
             "name": "Tigran",
-            "email": "info@armcoder.am",
-            "role" : "Developer"
+            "email": "tigran@azatyan.info",
+            "role" : "Software Developer"
         }
     ],
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.2",
-        "symfony/framework-bundle": "2.*",
-        "symfony/finder": "2.*"
+        "symfony/framework-bundle": "2.*|3.*",
+        "symfony/finder": "2.*|3.*"
     },
     "autoload": {
-        "psr-0": {
-            "ArmCoder\\ArmenianLocaleBundle": ""
+        "psr-4": {
+            "Azatyan\\ArmenianLocaleBundle\\": ""
         }
     },
-    "target-dir": "ArmCoder/ArmenianLocaleBundle"
+    "target-dir": "Azatyan/ArmenianLocaleBundle"
 }

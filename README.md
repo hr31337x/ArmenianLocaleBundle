@@ -3,8 +3,8 @@ Armenian Locale Bundle
 
 This Bundle Integrates Armenian to Symfony2
 
-<a href="https://travis-ci.org/ArmCoder/ArmenianLocaleBundle">
-  <img src="https://travis-ci.org/ArmCoder/ArmenianLocaleBundle.png"
+<a href="https://travis-ci.org/Azatyan/ArmenianLocaleBundle">
+  <img src="https://travis-ci.org/Azatyan/ArmenianLocaleBundle.png"
 </a>
 <br />
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/da6b8260-237c-4b08-bbbc-dfb8613fd388/small.png)](https://insight.sensiolabs.com/projects/da6b8260-237c-4b08-bbbc-dfb8613fd388)
@@ -12,6 +12,6 @@ This Bundle Integrates Armenian to Symfony2
 
 <a href="/Resources/doc/index.md">See documentation here</a>
 
-This Bundle Is Part Of <a href="http://www.symfony.am">Symfony.AM Project</a>
+This Bundle Is Part Of <a href="https://www.symfony.am">Symfony.AM Project</a>
 
-Feedback email: tigran@symfony.am
+Feedback email: tigran@azatyan.info

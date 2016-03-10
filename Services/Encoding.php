@@ -1,78 +1,84 @@
 <?php
-/**
- * @author  ArmCoder
+
+/*
+ * This file is part of the ArmenianLocaleBundle.
+ * Symfony Framework Bundle
+ *
+ * @author Tigran Azatyan <tigran@azatyan.info>
+ *
+ * @copyright Tigran Azatyan  2013 - 2016
  */
 
-namespace ArmCoder\ArmenianLocaleBundle\Services;
+namespace Azatyan\ArmenianLocaleBundle\Services;
 
 /**
  * Armscii to Unicode Conversation
- * Class Unicode
- * @package ArmCoder\ArmenianLocaleBundle\Services
+ * Class Unicode.
  */
 class Encoding
 {
-
     /**
-     * Armscii
+     * Armscii.
+     *
      * @var string
      */
-    private $armsciiLetters = "²´¶¸º¼¾ÀÂÄÆÈÊÌÎÐÒÔÖØÚÜÞàâäæèêìîðòôöøúü³µ·•¹»½¿ÁÃÅÇÉËÍÏÑÓÕ×ÙÛÝßáãåçéëíïñóõ÷ù¨ûý";
+    private $armsciiLetters = '²´¶¸º¼¾ÀÂÄÆÈÊÌÎÐÒÔÖØÚÜÞàâäæèêìîðòôöøúü³µ·•¹»½¿ÁÃÅÇÉËÍÏÑÓÕ×ÙÛÝßáãåçéëíïñóõ÷ù¨ûý';
 
     /**
-     * Unicode
+     * Unicode.
+     *
      * @var string
      */
-    private $unicodeLetters = "ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁՂՃՄՅՆՇՈՉՊՋՌՍՎՏՐՑՒՓՔՕՖաբգգդեզէըթժիլխծկհձղճմյնշոչպջռսվտրցւփքևօֆ";
+    private $unicodeLetters = 'ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁՂՃՄՅՆՇՈՉՊՋՌՍՎՏՐՑՒՓՔՕՖաբգգդեզէըթժիլխծկհձղճմյնշոչպջռսվտրցւփքևօֆ';
 
     /**
-     * Method For Converting From Armscii to Unicode
+     * Method For Converting From Armscii to Unicode.
+     *
      * @param $inString
+     *
      * @return string
      */
     public function armsciiToUnicode($inString)
     {
+        $inStringLength = mb_strlen($inString, 'UTF-8');
+        $outString = '';
 
-        $inStringLength = mb_strlen($inString, "UTF-8");
-        $outString = "";
-
-        for ($i = 0; $i < $inStringLength; $i++) {
-          $currentCharacter = mb_substr($inString, $i, 1, "UTF-8");
-          $pos = mb_strpos( $this->armsciiLetters,$currentCharacter, 1, "UTF-8");
-          if ($pos < -1) {
-              $outString .= $currentCharacter;
-          } else {
-              $outString .= mb_substr($this->unicodeLetters, $pos,1, "UTF-8");
-          }
+        for ($i = 0; $i < $inStringLength; ++$i) {
+            $currentCharacter = mb_substr($inString, $i, 1, 'UTF-8');
+            $pos = mb_strpos($this->armsciiLetters, $currentCharacter, 1, 'UTF-8');
+            if ($pos < -1) {
+                $outString .= $currentCharacter;
+            } else {
+                $outString .= mb_substr($this->unicodeLetters, $pos, 1, 'UTF-8');
+            }
         }
 
         return $outString;
     }
 
     /**
-     * Method For Converting From Unicode to Armscii
+     * Method For Converting From Unicode to Armscii.
+     *
      * @param $inString
+     *
      * @return string
      */
     public function unicodeToArmscii($inString)
     {
+        $inStringLength = mb_strlen($inString, 'UTF-8');
+        $outString = '';
 
-        $inStringLength = mb_strlen($inString, "UTF-8");
-        $outString = "";
+        for ($i = 0; $i < $inStringLength; ++$i) {
+            $currentCharacter = mb_substr($inString, $i, 1, 'UTF-8');
 
-        for ($i = 0; $i < $inStringLength; $i++) {
-
-          $currentCharacter = mb_substr($inString,$i,1, "UTF-8");
-
-          $pos = mb_strpos($this->unicodeLetters, $currentCharacter,1, "UTF-8");
-          if ($pos < -1) {
-              $outString .= $currentCharacter;
-          } else {
-              $outString .= mb_substr($this->armsciiLetters, $pos, 1, "UTF-8");
-          }
-      }
+            $pos = mb_strpos($this->unicodeLetters, $currentCharacter, 1, 'UTF-8');
+            if ($pos < -1) {
+                $outString .= $currentCharacter;
+            } else {
+                $outString .= mb_substr($this->armsciiLetters, $pos, 1, 'UTF-8');
+            }
+        }
 
         return $outString;
     }
-
 }
