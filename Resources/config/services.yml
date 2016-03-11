@@ -1,9 +1,9 @@
 parameters:
     armenian.locale.translit.class: Azatyan\ArmenianLocaleBundle\Services\Translit
     armenian.locale.encoding.class: Azatyan\ArmenianLocaleBundle\Services\Encoding
-    armenian.local.whois.server: "whois.amnic.net"
-    armenian.local.whois.class: Azatyan\ArmenianLocaleBundle\Services\Whois
-    armenian.local.helper.class: Azatyan\ArmenianLocaleBundle\Services\Helper
+    armenian.locale.whois.server: "whois.amnic.net"
+    armenian.locale.whois.class: Azatyan\ArmenianLocaleBundle\Services\Whois
+    armenian.locale.helper.class: Azatyan\ArmenianLocaleBundle\Services\Helper
 
 services:
     armenian.locale.translit:
@@ -13,7 +13,7 @@ services:
         class: %armenian.locale.encoding.class%
         arguments: []
     armenian.locale.whois:
-        class: %armenian.local.whois.class%
-        arguments: [%armenian.local.whois.server%]
+        class: %armenian.locale.whois.class%
+        arguments: [%armenian.locale.whois.server%]
     armenian.locale.helper:
-        class: %armenian.local.helper.class%
+        class: %armenian.locale.helper.class%
