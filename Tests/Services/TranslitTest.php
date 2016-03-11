@@ -19,7 +19,7 @@ use Azatyan\ArmenianLocaleBundle\Services\Translit;
 class TranslitTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     *  Check Translit function.
+     *  Check Translit Method.
      */
     public function testLatinToArmenian()
     {

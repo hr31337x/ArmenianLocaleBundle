@@ -19,7 +19,7 @@ use Azatyan\ArmenianLocaleBundle\Services\Encoding;
 class EncodingTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     *  Check Encoding function.
+     *  Check Encoding Method.
      */
     public function testUnicodeArmsciiArmenian()
     {

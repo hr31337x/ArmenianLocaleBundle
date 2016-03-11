@@ -19,7 +19,7 @@ use Azatyan\ArmenianLocaleBundle\Services\Whois;
 class WhoisTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     *  Check Whois function.
+     *  Check Whois Method.
      */
     public function testGet()
     {
