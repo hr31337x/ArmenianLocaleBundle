@@ -27,7 +27,7 @@ class HelperTest extends \PHPUnit_Framework_TestCase
         $capitals = $helper->getAlphabet(true);
         $lowercases = $helper->getAlphabet(false);
 
-        $this->assertEquals(37, count($capitals), 'Capitals');
-        $this->assertEquals(38, count($lowercases), 'Lowercases');
+        $this->assertEquals(38, count($capitals), 'Capitals');
+        $this->assertEquals(39, count($lowercases), 'Lowercases');
     }
 }
