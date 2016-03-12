@@ -1,7 +1,7 @@
 Armenian Locale Bundle
 ====================
 
-This Bundle Integrates Armenian to Symfony2
+Armenian Localisation methods/functions integrate to Symfony Web Framework as Bundle
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/da6b8260-237c-4b08-bbbc-dfb8613fd388/big.png)](https://insight.sensiolabs.com/projects/da6b8260-237c-4b08-bbbc-dfb8613fd388)
 
