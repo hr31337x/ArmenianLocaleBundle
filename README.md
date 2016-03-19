@@ -4,7 +4,7 @@ Armenian Locale Bundle
 Armenian Localisation methods/functions integrate to Symfony Web Framework as Bundle
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/da6b8260-237c-4b08-bbbc-dfb8613fd388/big.png)](https://insight.sensiolabs.com/projects/da6b8260-237c-4b08-bbbc-dfb8613fd388)
-
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](Resources/meta/LICENSE)
 [![Build Status](https://travis-ci.org/azatyan/ArmenianLocaleBundle.svg?branch=master)](https://travis-ci.org/azatyan/ArmenianLocaleBundle) [![Total Downloads](https://poser.pugx.org/azatyan/armenian-locale-bundle/downloads.svg)](https://packagist.org/packages/azatyan/armenian-locale-bundle) [![Latest Stable Version](https://poser.pugx.org/azatyan/armenian-locale-bundle/v/stable.svg)](https://packagist.org/packages/azatyan/armenian-locale-bundle)
 
 
