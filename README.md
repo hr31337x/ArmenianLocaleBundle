@@ -8,9 +8,6 @@ Armenian Localisation methods/functions integrate to Symfony Web Framework as Bu
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](Resources/meta/LICENSE)
 [![Build Status](https://travis-ci.org/azatyan/ArmenianLocaleBundle.svg?branch=master)](https://travis-ci.org/azatyan/ArmenianLocaleBundle) [![Total Downloads](https://poser.pugx.org/azatyan/armenian-locale-bundle/downloads.svg)](https://packagist.org/packages/azatyan/armenian-locale-bundle) [![Latest Stable Version](https://poser.pugx.org/azatyan/armenian-locale-bundle/v/stable.svg)](https://packagist.org/packages/azatyan/armenian-locale-bundle)
 [![HHVM Status](https://img.shields.io/hhvm/azatyan/armenian-locale-bundle.svg?style=flat-square)](http://hhvm.h4cc.de/package/azatyan/armenian-locale-bundle)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/azatyan/ArmenianLocaleBundle.svg?style=flat-square)](https://scrutinizer-ci.com/g/azatyan/ArmenianLocaleBundle/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/azatyan/ArmenianLocaleBundle.svg?style=flat-square)](https://scrutinizer-ci.com/g/azatyan/ArmenianLocaleBundle)
-
 
 
 <a href="/Resources/doc/index.md">See documentation</a>
