@@ -1,7 +1,7 @@
 {
     "name": "azatyan/armenian-locale-bundle",
     "type": "symfony-bundle",
-    "description": "Integrate Armenian to Symfony2 and Symfony3",
+    "description": "Integrate Armenian to Symfony Framework | Also you can use this classes directly",
     "keywords": ["armenian", "armenia","hayeren"],
     "license": "MIT",
     "authors": [
