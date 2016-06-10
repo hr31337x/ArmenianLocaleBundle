@@ -21,11 +21,11 @@ new Azatyan\ArmenianLocaleBundle\AzatyanArmenianLocaleBundle(),
 ```
 Usage
 =======
-<p>1. Translit Service (thanks to <a target="_blank" href="http://hayeren.am/">www.hayeren.am</a>).</p>
+<p>1. Translit Service</p>
 ```php
 $this->get("armenian.locale.translit")->latinToArmenian("Barev");  // (string) "Բարև"
 ```
-<p>2. Encoding Service (thanks to <a target="_blank" href="http://hayeren.am/">www.hayeren.am</a> ).</p>
+<p>2. Encoding Service</p>
 ```php
 $this->get("armenian.locale.encoding")->unicodeToArmscii("Barev");  // (string) with Armscii encoding;
 $this->get("armenian.locale.encoding")->armsciiToUnicode("Barev");  // (string) with Unicode encoding;
@@ -34,12 +34,14 @@ $this->get("armenian.locale.encoding")->armsciiToUnicode("Barev");  // (string) 
 ```php
 $this->get("armenian.locale.whois")->get("amnic.am");  //  (string) whois data
 ```
-<p>3. Helper</p>
+<p>4. Helper</p>
 * Alphabet
 ```php
 $this->get("armenian.locale.helper")->getAlphabet($capital=true);  //  (array) armenian alphabet
 ```
 
-This Bundle Is Part Of <a href="https://www.symfony.am">Symfony.AM Project</a>
+This Bundle Is Part Of <a href="https://www.symfony.am">Symfony Armenia Project</a>
+
+Point 1 and 2 are converted from JavaSctipt algoritm ( Thanks to http://hayeren.am/ Project)
 
 Feedback email: tigran@azatyan.info
