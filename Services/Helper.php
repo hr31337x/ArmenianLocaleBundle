@@ -17,7 +17,8 @@ namespace Azatyan\ArmenianLocaleBundle\Services;
 class Helper
 {
     /**
-     * Get Armenian Alphabet as Array
+     * Get Armenian Alphabet as Array.
+     *
      * @param $capital bool
      *
      * @return array
@@ -32,7 +33,8 @@ class Helper
     }
 
     /**
-     * Multi-byte Range
+     * Multi-byte Range.
+     *
      * @param $start
      * @param $end
      *
