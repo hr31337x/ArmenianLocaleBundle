@@ -217,24 +217,27 @@ class HaykyanDate
         }
     }
 
-    public function __init1($tarb)
+    public function __init1($v)
     {
-        $this->setVariant($tarb);
+        $this->setVariant($v);
         $this->date = getdate();
+        $this->createDate();
         return $this->get();
     }
 
-    public function __init2($dateMySql, $tarb)
+    public function __init2($dateMySql, $v)
     {
-        $this->setVariant($tarb);
+        $this->setVariant($v);
         $this->date = getdate(strtotime($dateMySql));
+        $this->createDate();
         return $this->get();
     }
 
-    public function __init5($year, $month, $day, $hour, $tarb)
+    public function __init5($year, $month, $day, $hour, $v)
     {
-        $this->setVariant($tarb);
+        $this->setVariant($v);
         $this->date = getdate(mktime($hour, 00, 00, $month, $day, $year));
+        $this->createDate();
         return $this->get();
     }
 
@@ -267,7 +270,7 @@ class HaykyanDate
         $this->monthNum = $h['mon'];
         $this->dayNum = $h['mday'];
 
-        $this->dtartOfThisYear = getdate(mktime(00, 00, 00, $this->yrM, $this->yrD, $h['year']));
+        $this->startOfThisYear = getdate(mktime(00, 00, 00, $this->yrM, $this->yrD, $h['year']));
 
         //Օրերի քանակը, որը անցել է սկսած Օգոստոսի 11-ից, կարող է լինել նաև բացասական
         $daysleft = floor(($this->date[0] - $this->startOfThisYear[0]) / 60 / 60 / 24);
@@ -281,7 +284,7 @@ class HaykyanDate
         }
 
         //Բուն Հայկյան Ամսանուն
-        //TODO դզել հաշվի առնելով բացասական օրերի հարցը և վերջին ամսվա հավելյալ 5 օրերը
+        // @TODO դզել հաշվի առնելով բացասական օրերի հարցը և վերջին ամսվա հավելյալ 5 օրերը
         $monthsleft = floor($daysleft / 30);
         $this->armMonthName = $this->monthNames[$monthsleft];
 
