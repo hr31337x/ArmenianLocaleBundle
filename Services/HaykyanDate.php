@@ -54,7 +54,7 @@ class HaykyanDate
         'Գիշերավար',
     ];
 
-    /*
+    /**
      *  ժամանուններ
      */
     private $hourNames = ['Խաւարականն',  //գիշերվա 00
@@ -111,21 +111,82 @@ class HaykyanDate
         'Արտախույր',
         'Փառազնոտի', ];
 
-    private $epYr; //Հայկյան տոմարի տարբերությունը մեր թվարկության համակարգինց տարիներով
-    private $yrM;  //ամանորի ամիսը
-    private $yrD;  //ամանորի օրը
 
-    private $date;              //Կոնվերտացվող ամսաթիվը
-    private $monthNum;      //Ամսվա համարը
-    private $dayNum;          //Օրվա համարը
-    private $yearNum;          //Տարին
-    private $startOfThisYear; //Տվյալ տրավա համար տարվա սկզիբը
+    /**
+     * @var
+     * Հայկյան տոմարի տարբերությունը մեր թվարկության համակարգինց տարիներով
+     */
+    private $epYr;
 
-    public $armHourName;      //Հայկյան ժամանուն
-    public $armDayName;          //Հայկյան օրանուն
-    public $armMonthName;      //Հայկյան ամսանուն
-    public $armYear;          //Հայկյան տարի
+    /**
+     * @var
+     * ամանորի ամիսը
+     */
+    private $yrM;
 
+    /**
+     * @var
+     * ամանորի օրը
+     */
+    private $yrD;
+
+    /**
+     * @var
+     * Կոնվերտացվող ամսաթիվը
+     */
+    private $date;
+
+    /**
+     * @var
+     * Ամսվա համարը
+     */
+    private $monthNum;
+
+    /**
+     * @var
+     * Օրվա համարը
+     */
+    private $dayNum;
+
+    /**
+     * @var
+     * Տարին
+     */
+    private $yearNum;
+
+    /**
+     * @var
+     * Տվյալ տրավա համար տարվա սկզիբը
+     */
+    private $startOfThisYear;
+
+    /**
+     * @var
+     * Հայկյան ժամանուն
+     */
+    public $armHourName;
+
+    /**
+     * @var
+     * Հայկյան օրանուն
+     */
+    public $armDayName;
+
+    /**
+     * @var
+     * Հայկյան ամսանուն
+     */
+    public $armMonthName;
+
+    /**
+     * @var
+     * Հայկյան տարի
+     */
+    public $armYear;
+
+    /**
+     * HaykyanDate constructor.
+     */
     public function __construct()
     {
         $a = func_get_args();
@@ -166,14 +227,14 @@ class HaykyanDate
     {
         if ($tarb == 1) {
             //Տարբերակ 1 -ի համար
-            $this->EpYr = 2492; //մթա
-            $this->YrM = 8;
-            $this->YrD = 11;
+            $this->epYr = 2492; //մթա
+            $this->yrM = 8;
+            $this->yrD = 11;
         } else {
             //Տարբերակ 2 -ի համար
-            $this->EpYr = 2341; //մթա
-            $this->YrM = 7;
-            $this->YrD = 14;
+            $this->epYr = 2341; //մթա
+            $this->yrM = 7;
+            $this->yrD = 14;
         }
     }
 
@@ -181,7 +242,7 @@ class HaykyanDate
     {
         //Բուն Հայկյան ժամը
         $h = $this->date;
-        $this->armHourName = $this->HourNames[$h['hours']];
+        $this->armHourName = $this->hourNames[$h['hours']];
 
         //Տարվա առաջին օրվա որոշումը
         $this->monthNum = $h['mon'];
@@ -227,8 +288,9 @@ class HaykyanDate
         ]
     }
 
-    public function getPropertyes()
+    public function getProperties()
     {
+        // TODO: whats this doing.?
         return '<br>ArmYear='.$this->armYear.
         '<br>ArmMonthName='.$this->armMonthName.
         '<br>ArmDayName='.$this->armDayName.
