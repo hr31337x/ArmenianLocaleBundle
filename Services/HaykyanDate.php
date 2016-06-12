@@ -205,32 +205,26 @@ class HaykyanDate
     /**
      * HaykyanDate
      */
-    public function create()
+    public function __construct()
     {
         $a = func_get_args();
         $i = func_num_args();
-
-        /* @TODO: whats this? */
-        if (method_exists($this, $f = '__init'.$i)) {
-            call_user_func_array([$this, $f], $a);
-        }
-
         switch($i) {
             case 2:
                 $this->setVariant($a[0]);
                 $this->date = getdate(strtotime($a[1]));
-                $this->createDate();
+                $this->create();
                 break;
 
             case 5:
                 $this->setVariant($a[0]);
                 $this->date = getdate(mktime($a[1], 00, 00, $a[2], $a[3], $a[4]));
-                $this->createDate();
+                $this->create();
                 break;
             default:
                 $this->setVariant($a[0]);
                 $this->date = getdate();
-                $this->createDate();
+                $this->create();
                 break;
         }
 
@@ -262,7 +256,7 @@ class HaykyanDate
     /**
      * @return $this
      */
-    private function createDate()
+    private function create()
     {
         //Բուն Հայկյան ժամը
         $h = $this->date;
