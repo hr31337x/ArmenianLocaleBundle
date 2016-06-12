@@ -1,6 +1,7 @@
 <?php
 
+require_once("vendor/autoload.php");
+
 $d = new \Azatyan\ArmenianLocaleBundle\Services\HaykyanDate();
 
-$d->create();
-var_dump($d);
+print_r($d->create(1)->get());

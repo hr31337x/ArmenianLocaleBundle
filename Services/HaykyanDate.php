@@ -226,7 +226,7 @@ class HaykyanDate
                 $this->date = getdate();
                 $this->createDate();
                 break;
-        }
+        };
 
         return $this;
 
@@ -272,7 +272,7 @@ class HaykyanDate
         $daysleft = floor(($this->date[0] - $this->startOfThisYear[0]) / 60 / 60 / 24);
 
         //Բուն Հայկյան Տարի և անցած օրերի ճշտում բացասականի դեպքում
-        $this->armYear = $this->EpYr + $h['year'] + 1;
+        $this->armYear = $this->epYr + $h['year'] + 1;
         if ($daysleft < 0) {
             $this->armYear = $this->armYear - 1;
             $this->startOfThisYear = getdate(mktime(00, 00, 00, $this->yrM, $this->yrD, $h['year'] - 1));
@@ -308,7 +308,7 @@ class HaykyanDate
             'm' => $this->armMonthName,
             'd' => $this->armDayName,
             'h' => $this->armHourName 
-        ]
+        ];
     }
     
     /**
