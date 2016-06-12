@@ -204,19 +204,20 @@ class HaykyanDate
     public $armYear;
 
     /**
-     * HaykyanDate getter
+     * HaykyanDate
      */
     public function create()
     {
         $a = func_get_args();
         $i = func_num_args();
 
-        // @TODO: whats this? :/
+        /* @TODO: whats this? */
         if (method_exists($this, $f = '__init'.$i)) {
             call_user_func_array([$this, $f], $a);
         }
     }
 
+    /* @TODO */
     public function __init1($v)
     {
         $this->setVariant($v);
@@ -225,6 +226,7 @@ class HaykyanDate
         return $this;
     }
 
+    /* @TODO */
     public function __init2($dateMySql, $v)
     {
         $this->setVariant($v);
@@ -233,6 +235,7 @@ class HaykyanDate
         return $this;
     }
 
+    /* @TODO */
     public function __init5($year, $month, $day, $hour, $v)
     {
         $this->setVariant($v);
@@ -262,6 +265,9 @@ class HaykyanDate
         return $this;
     }
 
+    /**
+     * @return $this
+     */
     private function createDate()
     {
         //Բուն Հայկյան ժամը
@@ -304,6 +310,9 @@ class HaykyanDate
         return $this;
     }
 
+    /**
+     * @return array
+     */
     public function get()
     {
         return [
@@ -315,6 +324,9 @@ class HaykyanDate
     }
 
 
+    /**
+     * @return \DateTime
+     */
     public function getDateTime(){
         $dateTime = new \DateTime('now', new \DateTimeZone('Asia/Yerevan'));
         $dateTime->setDate($this->armYear,$this->armMonthName,$this->armDayName);
@@ -323,9 +335,12 @@ class HaykyanDate
         return $dateTime;
     }
 
+    /**
+     * @return string
+     */
     public function getProperties()
     {
-        // TODO: whats this doing.?
+        /* @TODO: whats this doing.? */
         return '<br>ArmYear='.$this->armYear.
         '<br>ArmMonthName='.$this->armMonthName.
         '<br>ArmDayName='.$this->armDayName.
