@@ -185,9 +185,9 @@ class HaykyanDate
     public $armYear;
 
     /**
-     * HaykyanDate constructor.
+     * HaykyanDate getter
      */
-    public function __construct()
+    public function get()
     {
         $a = func_get_args();
         $i = func_num_args();
