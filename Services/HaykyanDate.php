@@ -312,14 +312,19 @@ class HaykyanDate
     }
     
     /**
+     * @param $br true
      * @return string
      */
-    public function getProperties()
+    public function getHTML($br=true)
     {
-        /* @TODO: whats this doing.? */
-        return '<br>ArmYear = '.$this->armYear.
-        ' <br>ArmMonthName = '.$this->armMonthName.
-        ' <br>ArmDayName = '.$this->armDayName.
-        ' <br>ArmHourName = '.$this->armHourName;
+        $data =  [
+            'Տարի` ' .  $this->armYear,
+            'Ամիս` ' .  $this->armMonthName,
+            'Օր` '   .  $this->armDayName,
+            'Ժամ` '  .  $this->armHourName
+        ];
+        
+        return $br ? implode("<br />", $data) : implode(", ",$data);
+        
     }
 }
