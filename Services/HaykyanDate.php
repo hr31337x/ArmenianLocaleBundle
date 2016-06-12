@@ -5,6 +5,7 @@
  * Symfony Framework Bundle
  *
  * @author Tigran Azatyan <tigran@azatyan.info>
+ * @author Հանուման <http://ablog.gratun.am>
  *
  * @copyright Tigran Azatyan  2013 - 2016
  */
