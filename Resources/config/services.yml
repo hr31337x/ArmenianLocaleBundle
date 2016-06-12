@@ -1,19 +1,16 @@
 parameters:
-    armenian.locale.translit.class: Azatyan\ArmenianLocaleBundle\Services\Translit
-    armenian.locale.encoding.class: Azatyan\ArmenianLocaleBundle\Services\Encoding
     armenian.locale.whois.server: "whois.amnic.net"
-    armenian.locale.whois.class: Azatyan\ArmenianLocaleBundle\Services\Whois
-    armenian.locale.helper.class: Azatyan\ArmenianLocaleBundle\Services\Helper
-
 services:
     armenian.locale.translit:
-        class: %armenian.locale.translit.class%
+        class: Azatyan\ArmenianLocaleBundle\Services\Translit
         arguments: []
     armenian.locale.encoding:
-        class: %armenian.locale.encoding.class%
+        class: Azatyan\ArmenianLocaleBundle\Services\Encoding
         arguments: []
     armenian.locale.whois:
-        class: %armenian.locale.whois.class%
+        class: Azatyan\ArmenianLocaleBundle\Services\Whois
         arguments: [%armenian.locale.whois.server%]
     armenian.locale.helper:
-        class: %armenian.locale.helper.class%
+        class: Azatyan\ArmenianLocaleBundle\Services\Helper
+    armenian.locale.date.hayk:
+        class: Azatyan\ArmenianLocaleBundle\Services\HaykyanDate
