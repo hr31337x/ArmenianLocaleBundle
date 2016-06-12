@@ -14,13 +14,13 @@ namespace Azatyan\ArmenianLocaleBundle\Services;
 /**
  * Class HaykyanDate.
  * 
- * 
- * // Կլաս, որը կառուցում է Բուն Հայկյան Տոմարով ամսաթվեր
+ * Կառուցում է Բուն Հայկյան Տոմարով ամսաթվեր
  */
 class HaykyanDate
 {
-    //Մասիվներ
-    //օրանուններ
+    /**
+     * օրանուններ
+     */
     private $dayNames = [
         'Արէգ',
         'Հրանդ',
@@ -54,8 +54,10 @@ class HaykyanDate
         'Գիշերավար',
     ];
 
-    //ժամանուններ
-    private $HourNames = ['Խաւարականն',  //գիշերվա 00
+    /*
+     *  ժամանուններ
+     */
+    private $hourNames = ['Խաւարականն',  //գիշերվա 00
         'Աղջամուղջն',
         'Մթացեալն',
         'Շաղաւոտն',
@@ -81,7 +83,9 @@ class HaykyanDate
         'Արփողն',
     ];
 
-    //ամսանուններ
+    /**
+     * ամսանուններ
+     */
     private $monthNames = [
         'Նավասարդ',
         'Հոռի',
@@ -97,7 +101,9 @@ class HaykyanDate
         'Հրոտից',
         'Ավելյաց', ];
 
-    //ավելյաց օրանուններ
+    /**
+     * ավելյաց օրանուններ
+     */
     private $avelyac = [
         'Լուծ',
         'Եղջերու',
@@ -105,25 +111,27 @@ class HaykyanDate
         'Արտախույր',
         'Փառազնոտի', ];
 
-    private $EpYr; //Հայկյան տոմարի տարբերությունը մեր թվարկության համակարգինց տարիներով 
-    private $YrM;  //ամանորի ամիսը
-    private $YrD;  //ամանորի օրը
+    private $epYr; //Հայկյան տոմարի տարբերությունը մեր թվարկության համակարգինց տարիներով
+    private $yrM;  //ամանորի ամիսը
+    private $yrD;  //ամանորի օրը
 
-    private $Date;              //Կոնվերտացվող ամսաթիվը
+    private $date;              //Կոնվերտացվող ամսաթիվը
     private $monthNum;      //Ամսվա համարը
     private $dayNum;          //Օրվա համարը
     private $yearNum;          //Տարին
-    private $StartOfThisYear; //Տվյալ տրավա համար տարվա սկզիբը
+    private $startOfThisYear; //Տվյալ տրավա համար տարվա սկզիբը
 
-    public $ArmHourName;      //Հայկյան ժամանուն
-    public $ArmDayName;          //Հայկյան օրանուն
-    public $ArmMonthName;      //Հայկյան ամսանուն
-    public $ArmYear;          //Հայկյան տարի
+    public $armHourName;      //Հայկյան ժամանուն
+    public $armDayName;          //Հայկյան օրանուն
+    public $armMonthName;      //Հայկյան ամսանուն
+    public $armYear;          //Հայկյան տարի
 
     public function __construct()
     {
         $a = func_get_args();
         $i = func_num_args();
+
+        // @TODO: whats this? :/
         if (method_exists($this, $f = '__init'.$i)) {
             call_user_func_array([$this, $f], $a);
         }
@@ -136,10 +144,10 @@ class HaykyanDate
         $this->createArmDate();
     }
 
-    public function __init2($DateMySql, $tarb)
+    public function __init2($dateMySql, $tarb)
     {
         $this->setVariant($tarb);
-        $this->Date = getdate(strtotime($DateMySql));
+        $this->Date = getdate(strtotime($dateMySql));
         $this->createArmDate();
     }
 
@@ -172,58 +180,58 @@ class HaykyanDate
     private function createArmDate()
     {
         //Բուն Հայկյան ժամը
-        $h = $this->Date;
-        $this->ArmHourName = $this->HourNames[$h['hours']];
+        $h = $this->date;
+        $this->armHourName = $this->HourNames[$h['hours']];
 
         //Տարվա առաջին օրվա որոշումը
         $this->monthNum = $h['mon'];
         $this->dayNum = $h['mday'];
 
-        $this->StartOfThisYear = getdate(mktime(00, 00, 00, $this->YrM, $this->YrD, $h['year']));
+        $this->dtartOfThisYear = getdate(mktime(00, 00, 00, $this->yrM, $this->yrD, $h['year']));
 
         //Օրերի քանակը, որը անցել է սկսած Օգոստոսի 11-ից, կարող է լինել նաև բացասական
-        $daysleft = floor(($this->Date[0] - $this->StartOfThisYear[0]) / 60 / 60 / 24);
+        $daysleft = floor(($this->date[0] - $this->startOfThisYear[0]) / 60 / 60 / 24);
 
         //Բուն Հայկյան Տարի և անցած օրերի ճշտում բացասականի դեպքում
-        $this->ArmYear = $this->EpYr + $h['year'] + 1;
+        $this->armYear = $this->EpYr + $h['year'] + 1;
         if ($daysleft < 0) {
-            $this->ArmYear = $this->ArmYear - 1;
-            $this->StartOfThisYear = getdate(mktime(00, 00, 00, $this->YrM, $this->YrD, $h['year'] - 1));
-            $daysleft = floor(($this->Date[0] - $this->StartOfThisYear[0]) / 60 / 60 / 24);
+            $this->armYear = $this->armYear - 1;
+            $this->startOfThisYear = getdate(mktime(00, 00, 00, $this->yrM, $this->yrD, $h['year'] - 1));
+            $daysleft = floor(($this->date[0] - $this->startOfThisYear[0]) / 60 / 60 / 24);
         }
 
         //Բուն Հայկյան Ամսանուն
         //TODO դզել հաշվի առնելով բացասական օրերի հարցը և վերջին ամսվա հավելյալ 5 օրերը
         $monthsleft = floor($daysleft / 30);
-        $this->ArmMonthName = $this->monthNames[$monthsleft];
+        $this->armMonthName = $this->monthNames[$monthsleft];
 
         //Բուն Հայկյան Օրանուններ
         if ($daysleft - 30 * 12 > 0) {
             // ավելյաց ամսվա օրանունները
 
             $avOr = $daysleft - 30 * 12;
-            $this->ArmDayName = $this->avelyac[$avOr];
+            $this->armDayName = $this->avelyac[$avOr];
         } else {
             $daynmbr = $daysleft - floor($daysleft / 30) * 30;
-            $this->ArmDayName = $this->dayNames[$daynmbr];
+            $this->armDayName = $this->dayNames[$daynmbr];
         }
     }
 
     public function getArmHaykyanDate()
     {
         return [
-            'y' => $this->ArmYear,
-            'm' => $this->ArmMonthName,
-            'd' => $this->ArmDayName,
-            'h' => $this->ArmHourName 
+            'y' => $this->armYear,
+            'm' => $this->armMonthName,
+            'd' => $this->armDayName,
+            'h' => $this->armHourName 
         ]
     }
 
     public function getPropertyes()
     {
-        return '<br>ArmYear='.$this->ArmYear.
-        '<br>ArmMonthName='.$this->ArmMonthName.
-        '<br>ArmDayName='.$this->ArmDayName.
-        '<br>ArmHourName='.$this->ArmHourName;
+        return '<br>ArmYear='.$this->armYear.
+        '<br>ArmMonthName='.$this->armMonthName.
+        '<br>ArmDayName='.$this->armDayName.
+        '<br>ArmHourName='.$this->armHourName;
     }
 }
