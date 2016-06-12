@@ -12,5 +12,5 @@ services:
         arguments: [%armenian.locale.whois.server%]
     armenian.locale.helper:
         class: Azatyan\ArmenianLocaleBundle\Services\Helper
-    armenian.locale.date.haykyan:
+    armenian.locale.date.hayk:
         class: Azatyan\ArmenianLocaleBundle\Services\HaykyanDate
