@@ -42,10 +42,8 @@ $this->get("armenian.locale.helper")->getAlphabet($capital=true);  //  (array) a
 
 <p>5. HaykyanDate</p>
 ```php
-$this->get("armenian.locale.date.haykyan");
+$this->get("armenian.locale.date.haykyan"); // See Azatyan\ArmenianLocaleBundle\Services\HaykyanDate class for details
 ```
-See Azatyan\ArmenianLocaleBundle\Services\HaykyanDate class for details
-
 
 This Bundle Is Part Of <a href="https://www.symfony.am">Symfony Armenia Project</a>
 
