@@ -21,29 +21,36 @@ new Azatyan\ArmenianLocaleBundle\AzatyanArmenianLocaleBundle(),
 ```
 Usage
 =======
-<p>1. Translit Service</p>
+<p>1.  Տրանսլիտից հայատառ փոփոխում/ Translit Service</p>
 ```php
 $this->get("armenian.locale.translit")->latinToArmenian("Barev");  // (string) "Բարև"
 ```
-<p>2. Encoding Service</p>
+<p>2.  Կոդավորման փոփոխում/ Encoding Service</p>
 ```php
 $this->get("armenian.locale.encoding")->unicodeToArmscii("Barev");  // (string) with Armscii encoding;
 $this->get("armenian.locale.encoding")->armsciiToUnicode("Barev");  // (string) with Unicode encoding;
 ```
-<p>3. WhoIs Service</p>
+<p>3. Հայկական .հայ և .am դոմեյնային գոտիների հարցում / WhoIs Service</p>
 ```php
 $this->get("armenian.locale.whois")->get("amnic.am");  //  (string) whois data
 ```
-<p>4. Helper</p>
+<p>4. Այլ / Helper</p>
 * Alphabet
 ```php
 $this->get("armenian.locale.helper")->getAlphabet($capital=true);  //  (array) armenian alphabet
 ```
 
-<p>5. HaykyanDate</p>
+<p>5. Հայկյան օրացույցով ամսաթվի ստացում /  Haykyan Date</p>
 ```php
-$this->get("armenian.locale.date.haykyan"); // See Azatyan\ArmenianLocaleBundle\Services\HaykyanDate class for details
+$this->get("armenian.locale.date.haykyan")->create(1)->get(); // See Azatyan\ArmenianLocaleBundle\Services\HaykyanDate class for details
 ```
+
+
+
+
+
+
+
 
 This Bundle Is Part Of <a href="https://www.symfony.am">Symfony Armenia Project</a>
 
