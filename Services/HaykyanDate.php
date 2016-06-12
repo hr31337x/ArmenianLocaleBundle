@@ -6,6 +6,7 @@
  *
  * @author Tigran Azatyan <tigran@azatyan.info>
  * @author Հանուման <http://ablog.gratun.am>
+ * @link https://github.com/hanumanum/ArmHaykyanDate/blob/master/dateclass.php
  *
  * @copyright Tigran Azatyan  2013 - 2016
  */
