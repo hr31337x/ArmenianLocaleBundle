@@ -36,17 +36,16 @@ $this->get("armenian.locale.encoding")->armsciiToUnicode("Barev");  // (string) 
 ```php
 $this->get("armenian.locale.whois")->get("amnic.am");  //  (string) whois data
 ```
-<p>4. Այլ / Helper</p>
-* Այբուբեն / Alphabet
-```php
-$this->get("armenian.locale.helper")->getAlphabet($capital=true);  //  (array) armenian alphabet
-```
-
-<p>5. Հայկյան օրացույցով ամսաթվի ստացում /  Haykyan Date</p>
+<p>4. Հայկյան օրացույցով ամսաթվի ստացում /  Haykyan Date</p>
 ```php
 $this->get("armenian.locale.date.haykyan")->create(1)->get(); // See Azatyan\ArmenianLocaleBundle\Services\HaykyanDate class for details
 ```
 
+<p>5. Այլ / Helper</p>
+* Այբուբեն / Alphabet
+```php
+$this->get("armenian.locale.helper")->getAlphabet($capital=true);  //  (array) armenian alphabet
+```
 
 
 
