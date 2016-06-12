@@ -222,7 +222,7 @@ class HaykyanDate
         $this->setVariant($v);
         $this->date = getdate();
         $this->createDate();
-        return $this->get();
+        return $this;
     }
 
     public function __init2($dateMySql, $v)
@@ -230,7 +230,7 @@ class HaykyanDate
         $this->setVariant($v);
         $this->date = getdate(strtotime($dateMySql));
         $this->createDate();
-        return $this->get();
+        return $this;
     }
 
     public function __init5($year, $month, $day, $hour, $v)
@@ -238,7 +238,7 @@ class HaykyanDate
         $this->setVariant($v);
         $this->date = getdate(mktime($hour, 00, 00, $month, $day, $year));
         $this->createDate();
-        return $this->get();
+        return $this;
     }
 
     /**
@@ -258,6 +258,8 @@ class HaykyanDate
             $this->yrM = 7;
             $this->yrD = 14;
         }
+        
+        return $this;
     }
 
     private function createDate()
@@ -298,6 +300,8 @@ class HaykyanDate
             $daynmbr = $daysleft - floor($daysleft / 30) * 30;
             $this->armDayName = $this->dayNames[$daynmbr];
         }
+        
+        return $this;
     }
 
     public function get()
@@ -308,6 +312,15 @@ class HaykyanDate
             'd' => $this->armDayName,
             'h' => $this->armHourName 
         ]
+    }
+
+
+    public function getDateTime(){
+        $dateTime = new \DateTime('now', new \DateTimeZone('Asia/Yerevan'));
+        $dateTime->setDate($this->armYear,$this->armMonthName,$this->armDayName);
+        $dateTime->setTime($this->armHourName,0,0);
+        
+        return $dateTime;
     }
 
     public function getProperties()
