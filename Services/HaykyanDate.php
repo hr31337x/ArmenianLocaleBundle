@@ -9,8 +9,6 @@
  * @copyright Tigran Azatyan  2013 - 2016
  */
 
-/*  TODO: Will be refactored */
-
 namespace Azatyan\ArmenianLocaleBundle\Services;
 
 /**
@@ -126,37 +124,37 @@ class HaykyanDate
     {
         $a = func_get_args();
         $i = func_num_args();
-        if (method_exists($this, $f = '__construct'.$i)) {
+        if (method_exists($this, $f = '__init'.$i)) {
             call_user_func_array([$this, $f], $a);
         }
     }
 
-    public function __construct1($tarb)
+    public function __init1($tarb)
     {
-        $this->setTarberak($tarb);
+        $this->setVariant($tarb);
         $this->Date = getdate();
         $this->createArmDate();
     }
 
-    public function __construct2($DateMySql, $tarb)
+    public function __init2($DateMySql, $tarb)
     {
-        $this->setTarberak($tarb);
+        $this->setVariant($tarb);
         $this->Date = getdate(strtotime($DateMySql));
         $this->createArmDate();
     }
 
-    public function __construct5($year, $month, $day, $hour, $tarb)
+    public function __init5($year, $month, $day, $hour, $tarb)
     {
-        $this->setTarberak($tarb);
+        $this->setVariant($tarb);
         $this->Date = getdate(mktime($hour, 00, 00, $month, $day, $year));
         $this->createArmDate();
     }
 
-    public function __destruct()
-    {
-    }
-
-    private function setTarberak($tarb) //Ընտրում է հաշվարկների տարբերակներից, տես սքրիփթի սկիզբը
+    /**
+     * @param $tarb
+     * Ընտրում է հաշվարկների տարբերակներից, տես սքրիփթի սկիզբը
+     */
+    private function setVariant($tarb)
     {
         if ($tarb == 1) {
             //Տարբերակ 1 -ի համար
@@ -213,10 +211,12 @@ class HaykyanDate
 
     public function getArmHaykyanDate()
     {
-        return 'Տարի՝ '.$this->ArmYear.' '.
-        'Ամիս՝ '.$this->ArmMonthName.' '.
-        'Օր՝ '.$this->ArmDayName.' '.
-        'Ժամ՝ '.$this->ArmHourName;
+        return [
+            'y' => $this->ArmYear,
+            'm' => $this->ArmMonthName,
+            'd' => $this->ArmDayName,
+            'h' => $this->ArmHourName 
+        ]
     }
 
     public function getPropertyes()
