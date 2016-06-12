@@ -206,7 +206,7 @@ class HaykyanDate
     /**
      * HaykyanDate getter
      */
-    public function get()
+    public function create()
     {
         $a = func_get_args();
         $i = func_num_args();
@@ -220,22 +220,22 @@ class HaykyanDate
     public function __init1($tarb)
     {
         $this->setVariant($tarb);
-        $this->Date = getdate();
-        $this->createArmDate();
+        $this->date = getdate();
+        return $this->get();
     }
 
     public function __init2($dateMySql, $tarb)
     {
         $this->setVariant($tarb);
-        $this->Date = getdate(strtotime($dateMySql));
-        $this->createArmDate();
+        $this->date = getdate(strtotime($dateMySql));
+        return $this->get();
     }
 
     public function __init5($year, $month, $day, $hour, $tarb)
     {
         $this->setVariant($tarb);
-        $this->Date = getdate(mktime($hour, 00, 00, $month, $day, $year));
-        $this->createArmDate();
+        $this->date = getdate(mktime($hour, 00, 00, $month, $day, $year));
+        return $this->get();
     }
 
     /**
@@ -257,7 +257,7 @@ class HaykyanDate
         }
     }
 
-    private function createArmDate()
+    private function createDate()
     {
         //Բուն Հայկյան ժամը
         $h = $this->date;
@@ -297,7 +297,7 @@ class HaykyanDate
         }
     }
 
-    public function getArmHaykyanDate()
+    public function get()
     {
         return [
             'y' => $this->armYear,
