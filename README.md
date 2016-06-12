@@ -40,6 +40,13 @@ $this->get("armenian.locale.whois")->get("amnic.am");  //  (string) whois data
 $this->get("armenian.locale.helper")->getAlphabet($capital=true);  //  (array) armenian alphabet
 ```
 
+<p>5. HaykyanDate</p>
+```php
+$this->get("armenian.locale.date.haykyan");
+```
+See Azatyan\ArmenianLocaleBundle\Services\HaykyanDate class for details
+
+
 This Bundle Is Part Of <a href="https://www.symfony.am">Symfony Armenia Project</a>
 
 Point 1 and 2 are converted from JavaSctipt algoritm ( Thanks to http://hayeren.am/ Project)
