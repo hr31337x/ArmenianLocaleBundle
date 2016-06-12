@@ -212,14 +212,14 @@ class HaykyanDate
         $i = func_num_args();
         switch($i) {
             case 2:
-                $this->setVariant($a[0]);
-                $this->date = getdate(strtotime($a[1]));
+                $this->setVariant($a[1]);
+                $this->date = getdate(strtotime($a[0]));
                 $this->createDate();
                 break;
 
             case 5:
-                $this->setVariant($a[0]);
-                $this->date = getdate(mktime($a[1], 00, 00, $a[2], $a[3], $a[4]));
+                $this->setVariant($a[4]);
+                $this->date = getdate(mktime($a[0], 00, 00, $a[1], $a[2], $a[3]));
                 $this->createDate();
                 break;
             default:
