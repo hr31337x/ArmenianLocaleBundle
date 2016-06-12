@@ -1,4 +1,4 @@
-Armenian Locale Bundle
+Armenian Locale Bundle / Հայկական Ֆունկցիաներ
 ====================
 
 Հայկական և հայամետ ֆունկցիաներ՝ Symfony ֆրեյմվորքի համար և ոչ միայն
@@ -12,7 +12,7 @@ Armenian Localisation methods/functions integrate to Symfony Web Framework as Bu
 [![HHVM Status](https://img.shields.io/hhvm/azatyan/armenian-locale-bundle.svg?style=flat-square)](http://hhvm.h4cc.de/package/azatyan/armenian-locale-bundle)
 
 
-Installation
+Installation  / Տեղադրում 
 =======
 ```bash
 composer require "azatyan/armenian-locale-bundle";
@@ -21,7 +21,7 @@ Activate The Bundle in Symfony's  AppKernel.php file
 ```php
 new Azatyan\ArmenianLocaleBundle\AzatyanArmenianLocaleBundle(),
 ```
-Usage
+Usage / Օգտագործում
 =======
 <p>1.  Տրանսլիտից հայատառ փոփոխում / Translit Service</p>
 ```php
