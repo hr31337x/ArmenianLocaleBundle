@@ -37,7 +37,7 @@ $this->get("armenian.locale.encoding")->armsciiToUnicode("Barev");  // (string) 
 $this->get("armenian.locale.whois")->get("amnic.am");  //  (string) whois data
 ```
 <p>4. Այլ / Helper</p>
-* Alphabet
+* Այբուբեն / Alphabet
 ```php
 $this->get("armenian.locale.helper")->getAlphabet($capital=true);  //  (array) armenian alphabet
 ```
@@ -53,6 +53,6 @@ $this->get("armenian.locale.date.haykyan")->create(1)->get(); // See Azatyan\Arm
 
 
 Կոդը հանդիսանում է Symfony Հայաստան նախագծի մաս
+This Code is Part Of <a href="https://www.symfony.am">Symfony Armenia</a>
 
-This Bundle Is Part Of <a href="https://www.symfony.am">Symfony Armenia Project</a>
-Point 1 and 2 are converted from JavaSctipt algoritm ( Thanks to http://hayeren.am/ Project)
+Point 1 and 2 are converted from JavaSctipt algoritm (source: http://hayeren.am/)
