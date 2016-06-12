@@ -317,9 +317,9 @@ class HaykyanDate
     public function getProperties()
     {
         /* @TODO: whats this doing.? */
-        return '<br>ArmYear='.$this->armYear.
-        '<br>ArmMonthName='.$this->armMonthName.
-        '<br>ArmDayName='.$this->armDayName.
-        '<br>ArmHourName='.$this->armHourName;
+        return '<br>ArmYear = '.$this->armYear.
+        ' <br>ArmMonthName = '.$this->armMonthName.
+        ' <br>ArmDayName = '.$this->armDayName.
+        ' <br>ArmHourName = '.$this->armHourName;
     }
 }
