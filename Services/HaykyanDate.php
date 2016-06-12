@@ -310,19 +310,7 @@ class HaykyanDate
             'h' => $this->armHourName 
         ]
     }
-
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateTime(){
-        $dateTime = new \DateTime('now', new \DateTimeZone('Asia/Yerevan'));
-        $dateTime->setDate($this->armYear,$this->armMonthName,$this->armDayName);
-        $dateTime->setTime($this->armHourName,0,0);
-        
-        return $dateTime;
-    }
-
+    
     /**
      * @return string
      */
